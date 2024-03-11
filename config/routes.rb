@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
 
-  get "/articles", to: "articles#index"
-  
-  get 'welcome/index'
+  get "/welcome", to: "welcome#index"
 
-  resources :articles
+  get 'welcome/index' #le dice a Rails que asigne las solicitudes a al acción de índice del controlador de bienvenida
+  #get 'articles/index' 
 
-  root 'welcome#index'
+  root 'welcome#index' #le dice a Rails que mapee las solicitudes a la raíz del aplicación a la acción de índice del controlador de bienvenida 
 
-  #get "/articles", to: "articles#index"
+  resources :articles #define todas los acciones RESTful estándar
+
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
