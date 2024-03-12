@@ -1,4 +1,5 @@
 <! --  Cuando llamas a form_with, le pasas un alcance de identificación para esto formar. En este caso, es el símbolo :article -->
-<%= render 'form' %>
+
+<%= render "form", article: @article %>
 
 <%= link_to 'Back', articles_path %>
