@@ -29,10 +29,6 @@ class ArticlesController < ApplicationController
       #en este caso a Show envianmdo el parametro del id de articulo
     else
       
-      if @article.errors.any?
-        puts "malooooooooooooooooooo"
-      end  
-
       render "new"
       #El método render se utiliza para que el @artículo El objeto se devuelve a la plantilla "nueva" cuando se procesa
       
