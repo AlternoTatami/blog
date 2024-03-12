@@ -1,15 +1,4 @@
-<%= form_with scope: :article, local: true do |form| %>
-    <p>
-      <%= form.label :title %><br>
-      <%= form.text_field :title %>
-    </p>
-  
-    <p>
-      <%= form.label :text %><br>
-      <%= form.text_area :text %>
-    </p>
-  
-    <p>
-      <%= form.submit %>
-    </p>
-  <% end %>
+<! --  Cuando llamas a form_with, le pasas un alcance de identificación para esto formar. En este caso, es el símbolo :article -->
+<%= render 'form' %>
+
+<%= link_to 'Back', articles_path %>
