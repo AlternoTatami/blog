@@ -7,7 +7,11 @@ Rails.application.routes.draw do
 
   root 'welcome#index' #le dice a Rails que mapee las solicitudes a la raíz del aplicación a la acción de índice del controlador de bienvenida 
 
-  resources :articles #define todas los acciones RESTful estándar
+  resources :articles do
+    resources :comments
+  end
+  
+  #define todas los acciones RESTful estándar
 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
